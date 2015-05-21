@@ -6,7 +6,9 @@ var app = http.createServer(handler);
 app.listen(8080);
 
 function handler (req, res) {
-  console.log('test this push request');
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('It\'s alive!');
+
+  req.end('Stop without responding to clients');
+
+  //res.writeHead(200, { 'Content-Type': 'text/plain' });
+  //res.end('It\'s alive!');
 }
